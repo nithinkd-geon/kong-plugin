@@ -11,8 +11,7 @@ local pluginName = package:match("^kong%-plugin%-(.+)$")  -- "myPlugin"
 
 supported_platforms = {"linux", "macosx"}
 source = {
-  url = "https://github.com/nithinkd-geon/jwt-extract.git",
-  tag = "0.1.0"
+  url = "git://github.com/nithinkd-geon/jwt-extract"
 }
 
 description = {
