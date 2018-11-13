@@ -62,8 +62,6 @@ function JwtClaimsHeadersHandler:access(conf)
     for _,orginclaimkey in pairs(conf.claims_to_include) do      
       if claim_key == orginclaimkey then
          expclaimkey = orginclaimkey:gsub("https://api.delpheon.com/","")
-         expclaimkey = expclaimkey:gsub("company","CompanyName")
-         expclaimkey = expclaimkey:gsub("roles","UserRole")
          req_set_header(expclaimkey, claim_value)
       end
     end
